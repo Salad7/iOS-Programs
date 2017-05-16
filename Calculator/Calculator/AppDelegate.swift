@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  TabbedViewExample
+//  Calculator
 //
-//  Created by cci-loaner on 3/3/17.
+//  Created by cci-loaner on 5/15/17.
 //  Copyright © 2017 Kune Studios. All rights reserved.
 //
 
