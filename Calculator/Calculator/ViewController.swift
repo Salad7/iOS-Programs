@@ -10,9 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
-   
-    @IBOutlet private weak var display: UILabel?
     private var userIsInMiddleOfTyping = false
+   private var cBrain = CalculatorBrain()
+    @IBOutlet private weak var display: UILabel?
+    
     
     @IBAction private func touchDigit(_ sender: UIButton) {
      //Current digit
@@ -28,13 +29,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction private func PI(_ sender: UIButton) {
-    
-        if(sender.currentTitle == "PI"){
-        displayValue = Double.pi
-        }
-        else if (sender.currentTitle == "SQRT"){
-            displayValue = sqrt(displayValue)
-        }
+        cBrain.setOperand(someValue: displayValue)
+        displayValue = cBrain.performOperation(someOperation: sender.currentTitle!)
         userIsInMiddleOfTyping = true;
     }
     private var displayValue: Double {
@@ -45,5 +41,8 @@ class ViewController: UIViewController {
             display!.text = String(newValue)
         }
     }
+    
+    
+
 }
 

@@ -10,4 +10,28 @@ import Foundation
 
 class CalculatorBrain{
     
+    //The brain, does the calculations
+    //Recieves
+    init(){
+        
+    }
+    
+    var operand: Double =  0.0
+    var operation = 0.0
+    
+    func setOperand(someValue :Double){
+        operand = someValue
+    }
+    
+    
+    func performOperation(someOperation :String) -> Double {
+        switch someOperation {
+        case "PI":
+            return Double.pi
+            case "SQRT":
+            return sqrt(operand)
+        default:
+            return 0.0
+        }
+    }
 }
