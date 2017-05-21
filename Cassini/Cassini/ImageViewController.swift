@@ -34,7 +34,6 @@ class ImageViewController: UIViewController {
     func fetchUrl(){
         if let url = imageURL {
             let urlContents =
-                
                 try? Data(contentsOf: url)
             if let imageData = urlContents {
                 image = UIImage(data :imageData)!

@@ -29,9 +29,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="image" destination="h7r-Ie-dpY" id="bSX-d4-cmV"/>
                         <outlet property="imageV" destination="h7r-Ie-dpY" id="7JR-Mx-iKP"/>
-                        <outlet property="imageView" destination="h7r-Ie-dpY" id="ric-P9-BB7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Jp-SP-MW7" userLabel="First Responder" sceneMemberID="firstResponder"/>
