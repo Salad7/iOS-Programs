@@ -14,7 +14,9 @@ class ImageViewController: UIViewController {
 
     
     var image: UIImage? = nil
-
+    @IBOutlet weak var imageV: UIImageView!
+    
+    
     override func viewDidLoad() {
         imageURL = URL(string: "http://stanford.edu/about/images/intro_about.jpg")
     }
@@ -23,19 +25,12 @@ class ImageViewController: UIViewController {
         //When somebody sets the URL
         didSet {
             if(view.window != nil){
-            fetchUrl()
-                imageV.image = image
+                fetchUrl()
             }
             
         }
     }
-    @IBOutlet weak var imageV: UIImageView!
     
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        
-    }
     func fetchUrl(){
         if let url = imageURL {
             let urlContents =
@@ -43,6 +38,8 @@ class ImageViewController: UIViewController {
                 try? Data(contentsOf: url)
             if let imageData = urlContents {
                 image = UIImage(data :imageData)!
+                imageV.image = image
+
             }
         }
         
